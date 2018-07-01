@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sortable Ninja</title>
+        <meta name="description" content="Page organization via CSS">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!-- CONTAINER CLASS BEGINS -->
+        <div class="container">
+            <!-- CONTENT CLASS BEGINS (THE ENTIRE SITE)-->
+            <div class="content">
+                <ul id="sortable-list">
+                    <li class="picture" id="pic1"></li>
+                    <li class="picture" id="pic2"></li>
+                    <li class="picture" id="pic3"></li>
+                    <li class="picture" id="pic4"></li>
+                    <li class="picture" id="pic5"></li>
+                </ul>
+            </div>
+        </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="script.js"></script>
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+            <script>
+                $( function (){
+                    $("#pic1").css('background-image', "url('img/sort1.png')");
+                    $("#pic2").css('background-image', "url('img/sort2.png')");
+                    $("#pic3").css('background-image', "url('img/sort3.png')");
+                    $("#pic4").css('background-image', "url('img/sort4.png')");
+                    $("#pic5").css('background-image', "url('img/sort5.png')");
+                } );
+
+                $( function() {
+                    $( "#sortable-list" ).sortable({
+                        revert: true
+                    });
+                    $( "#draggable" ).draggable({
+                        connectToSortable: "#sortable",
+                        helper: "clone",
+                        revert: "invalid"
+                    });
+                    $( "ul, li" ).disableSelection();
+                    } );
+            </script>
+    </body>
+</html>

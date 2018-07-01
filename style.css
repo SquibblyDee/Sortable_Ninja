@@ -1,0 +1,36 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px red solid; */
+}
+
+.container{
+
+    background-color: #245076;
+    width: 970px;
+    height: auto;
+}
+
+.content{
+    padding: 10px 0px 10px 0px;
+}
+
+li{
+    list-style-type: none;
+}
+.picture{
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+
+img{
+    background-size: fill;
+}
+
+.picture{
+    width: 600px;
+    height: 150px;
+    margin: 10px 0px 10px 150px;
+}
